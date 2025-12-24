@@ -4,9 +4,12 @@ import com.ui.dataProvider.User;
 import com.ui.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static com.constant.Browser.CHROME;
+
+@Listeners({com.ui.listener.TestListener.class})
 
 public class LoginTest1 {
 
@@ -24,20 +27,20 @@ public class LoginTest1 {
         System.out.println(userName);
     }
 
-    @Test(description = "Drag and Drop", priority=1)
-    public void dragDrop(){
-        driver.get("https://demo.guru99.com/test/drag_drop.html");
-
-        //Element which needs to drag.
-        WebElement From=driver.findElement(By.xpath("//*[@id='credit2']/a"));
-
-        //Element on which need to drop.
-        WebElement To=driver.findElement(By.xpath("//*[@id='bank']/li"));
-
-        //Using Action class for drag and drop.
-        Actions act=new Actions(driver);
-
-        //Dragged and dropped.
-        act.dragAndDrop(From, To).build().perform();
-    }
+//    @Test(description = "Drag and Drop", priority=1)
+//    public void dragDrop(){
+//        driver.get("https://demo.guru99.com/test/drag_drop.html");
+//
+//        //Element which needs to drag.
+//        WebElement From=driver.findElement(By.xpath("//*[@id='credit2']/a"));
+//
+//        //Element on which need to drop.
+//        WebElement To=driver.findElement(By.xpath("//*[@id='bank']/li"));
+//
+//        //Using Action class for drag and drop.
+//        Actions act=new Actions(driver);
+//
+//        //Dragged and dropped.
+//        act.dragAndDrop(From, To).build().perform();
+//    }
 }
