@@ -4,14 +4,13 @@ import com.ui.dataProvider.User;
 import com.ui.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static com.constant.Browser.CHROME;
 
-@Listeners({com.ui.listener.TestListener.class})
+//@Listeners({com.ui.listener.TestListener.class})
 
-public class LoginTest1 {
+public class loginTest1 {
 
     HomePage homePage;
 
@@ -20,7 +19,7 @@ public class LoginTest1 {
         homePage = new HomePage(CHROME);
     }
 
-    @Test(description = "Verifies with valid user", groups = {"e2e","sanity"}, dataProviderClass = com.ui.dataProvider.LoginDataProvider.class,dataProvider = "LoginTestDataProvider")
+    @Test(description = "Verifies with valid user", dataProviderClass = com.ui.dataProvider.LoginDataProvider.class,dataProvider = "LoginTestDataProvider")
     public void loginTest(User user){
         String userName = homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName();
         Assert.assertEquals(userName,"Champak Demo");

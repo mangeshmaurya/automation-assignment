@@ -14,12 +14,13 @@ public class LoginTest {
 
     public static void main(String[] args){
 
+        System.out.println("Test");
         //WebDriver driver = new ChromeDriver();
-        HomePage homePage = new HomePage(CHROME);
-        //LoginPage loginPage = homePage.goToLoginPage();
-        //String userName = loginPage.doLoginWith("pagox18485@haotuwu.com","Welcome123").getUserName();
-        String userName = homePage.goToLoginPage().doLoginWith("pagox18485@haotuwu.com","Welcome123").getUserName();
-        System.out.println(userName);
+//        HomePage homePage = new HomePage(CHROME);
+//        //LoginPage loginPage = homePage.goToLoginPage();
+//        //String userName = loginPage.doLoginWith("pagox18485@haotuwu.com","Welcome123").getUserName();
+//        String userName = homePage.goToLoginPage().doLoginWith("pagox18485@haotuwu.com","Welcome123").getUserName();
+//        System.out.println(userName);
 //        WebDriver wd = new ChromeDriver(); //browser session created
 //        //wd.get("http://www.automationpractice.pl/");
 //        BrowserUtility browserUtility = new BrowserUtility(wd);
